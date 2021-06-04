@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains clear_content_type.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function clear_content_type_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the clear_content_type module.
+    case 'help.page.clear_content_type':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Clear content type') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function clear_content_type_theme() {
+  return [
+    'clear_content_type' => [
+      'render element' => 'children',
+    ],
+  ];
+}

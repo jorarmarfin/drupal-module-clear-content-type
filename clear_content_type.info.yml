@@ -1,0 +1,5 @@
+name: 'Clear content type'
+type: module
+description: 'Clear content type'
+core: 8.x
+package: 'DRINUX'
