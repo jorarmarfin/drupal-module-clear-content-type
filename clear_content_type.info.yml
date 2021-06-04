@@ -3,3 +3,4 @@ type: module
 description: 'Clear content type'
 core: 8.x
 package: 'DRINUX'
+version:  1.0.2
