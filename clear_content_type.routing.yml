@@ -1,8 +1,14 @@
 
 clear_content_type.default_controller_Default:
   path: '/clear/{tipo}/{cantidad}'
+  options:
+    _auth: [ 'basic_auth' ]
+    no_cache: 'TRUE'
   defaults:
     _controller: '\Drupal\clear_content_type\Controller\DefaultController::Default'
     _title: 'Clear'
   requirements:
     _permission: 'access content'
+    _role: 'authenticated'
+    _method: 'GET'
+
